@@ -21,9 +21,9 @@ const appReducer = (state = [], action) => {
       });
     case DELETE:
       return state.filter((currentStateElement) => currentStateElement.id !== action.payload.id);
+
     default:
       console.warn(`Nie mamy akcji typu ${action.type}`);
       return state;
   }
-  return state;
 };
